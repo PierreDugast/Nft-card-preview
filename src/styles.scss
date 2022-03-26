@@ -1,0 +1,188 @@
+@import "scss/reset";
+@import "scss/base";
+
+// COLORS :
+// primary
+$soft_blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// neutral
+$very_dark_blue_main_bg: hsl(217, 54%, 11%);
+$very_dark_blue_card_bg: hsl(216, 50%, 16%);
+$very_dark_blue_main_line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+$breakpoint-phone: 375px;
+$breakpoint-tablet:768px;
+$breakpoint-computer: 1440px;
+
+body {
+  @media (min-width:$breakpoint-phone) {
+    width: 375px;
+  }
+
+  @media (min-width:$breakpoint-tablet) {
+    width: 768px;
+  }
+
+  @media (min-width:$breakpoint-computer) {
+    width: 1440px;
+  }
+  
+  height: 900px;
+  font-size: 18px;
+  font-family: "Outfit";
+}
+
+.global_container {
+  height: 100%;
+  background-color: $very_dark_blue_main_bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: 350px;
+  height: 596px;
+
+  margin: 0 auto;
+
+  background-color: $very_dark_blue_card_bg;
+  border-radius: 18px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  
+
+
+  .nft {
+    width: 300px;
+    margin: 25px auto;
+    border-radius: 3%;
+    background-color: $cyan;
+    overflow: hidden;
+
+    img {
+      &:hover {
+        opacity: 0.5;
+        object-fit: cover;
+        background: $cyan;
+        overflow: hidden;
+
+        #view {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .view {
+    // transition: 0.2s ease;
+    opacity: 0;
+
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    margin: 0px 0px 150px 150px;
+    top: 300px;
+
+
+  }
+
+
+  .nft:hover + .view { opacity: 1;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none; //fait comme si l'élément était transparent pour le pointeur > le hover continue de s'appliquer
+ }
+
+
+  .description {
+    margin: 25px;
+
+    h1 {
+      color: $white;
+      font-weight: 600;
+      margin-bottom: 25px;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+
+    p {
+      color: $soft_blue;
+      font-weight: 300;
+
+      margin-bottom: 25px;
+    }
+  }
+
+  .numbers {
+    margin: 0 25px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    img {
+      height: 18px;
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .price {
+      width: 150px;
+      display: flex; //affiche le contenu en ligne
+      align-items: center; //align les items verticalement suivant leurs centres
+
+      p {
+        color: $cyan;
+        font-weight: 400;
+      }
+    }
+
+    .remaining_time {
+      justify-content: right; //met le contenu à droite
+
+      width: 150px;
+      display: flex; //affiche le contenu en ligne
+      align-items: center; //align les items verticalement suivant leurs centres
+
+      p {
+        color: $soft_blue;
+      }
+    }
+  }
+
+  .card_footer {
+    hr {
+      border: 1px solid $very_dark_blue_main_line;
+      margin-bottom: 15px;
+    }
+
+    margin: 20px 25px 25px 30px;
+    .author {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 30px;
+        width: auto;
+        border: 1px solid $white;
+        border-radius: 50%;
+      }
+
+      p {
+        color: $soft_blue;
+        margin-left: 15px;
+        .author_name_emphasis {
+          color: $white;
+
+          &:hover {
+            color: $cyan;
+          }
+        }
+        font-size: 15px;
+      }
+    }
+  }
+}
