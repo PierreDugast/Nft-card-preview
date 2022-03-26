@@ -5,9 +5,11 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel ./*.html",
-    "predeploy": "rm -rf dist && parcel build ./*.html --public-url "PierreDugast.github.io/Nft-card-preview"",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "parcel index.html",
+    "start-multiple-entries": "parcel index.html centered.html what.html ",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "assets": "^3.0.1",
