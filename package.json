@@ -1,9 +1,11 @@
 {
-  "name": "quick-parcel-project",
+  "name": "NFT_card_preview",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "parcel index.html",
     "start-multiple-entries": "parcel index.html centered.html what.html ",
     "build": "parcel build index.html"
@@ -15,6 +17,7 @@
     "scss": "^0.2.4"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "parcel-bundler": "^1.6.1",
     "sass": "^1.26.11",
     "typescript": "^4.4.3"
