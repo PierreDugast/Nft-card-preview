@@ -1,7 +1,7 @@
 {
-  "name": "NFT_card_preview",
+  "name": "nftcardpreview",
   "version": "1.0.0",
-  "homepage": "https://github.com/PierreDugast/Nft-card-preview",
+  "homepage": "https://PierreDugast.github.io/Nft-card-preview",
   "description": "",
   "main": "index.html",
   "scripts": {
