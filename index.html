@@ -12,42 +12,50 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
   </head>
 
   <body>
     <div class="global_container">
-      <div class="card">
-        <div class="nft"><img class="" src="assets/image-equilibrium.jpg" alt="" /></div>
-        <div class="view"><img src="assets/icon-view.svg" alt=""  /></div>
-
-        <div class="description">
-          <h1>Equilibrium #3429</h1>
-          <p>Our Equilibrium collection promotes balance and calm.</p>
+      <article class="card">
+        <div class="nft">
+          <img src="assets/image-equilibrium.jpg" alt="nft_content" />
+        </div>
+        <div class="view">
+          <img src="assets/icon-view.svg" alt="nft_view_icon" />
         </div>
 
-        <div class="numbers">
+        <section class="description">
+          <h1>Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </section>
+
+        <section class="numbers">
           <div class="price">
-            <img src="assets/icon-ethereum.svg" alt=""  />
+            <img src="assets/icon-ethereum.svg" alt="ethereum_icon" />
             <p>0.041 ETH</p>
           </div>
           <div class="remaining_time">
-            <img src="assets/icon-clock.svg" alt=""  />
+            <img src="assets/icon-clock.svg" alt="clock_icon" />
             <p>3 days left</p>
           </div>
-        </div>
-       
-        <div class="card_footer">
-            <hr />
-          <div class="author">
-            <img src="assets/image-avatar.png" alt=""  />
-            <p>Creation of <span class="author_name_emphasis">Jules Wyvern</span></p>
-          </div>
-        </div>
-      </div>
+        </section>
+
+        <footer class="card_footer">
+          <hr />
+          <figure class="author">
+            <img src="assets/image-avatar.png" alt="author_avatar" />
+            <p>
+              Creation of <span class="author_name_emphasis">Jules Wyvern</span>
+            </p>
+          </figure>
+        </footer>
+      </article>
     </div>
 
     <script type="module" src="src/index.ts"></script>
   </body>
-
 </html>
