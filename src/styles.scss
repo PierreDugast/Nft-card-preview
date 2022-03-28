@@ -12,12 +12,12 @@ body {
 
 .global_container {
 
-  @media screen and (min-width:$breakpoint-phone) {
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
     width: 375px;
   }
 
-  @media screen and (width:$breakpoint-tablet) {
-    width: 760px;
+  @media screen and (min-width:$breakpoint-tablet) {
+    width: 768px;
   }
 
   @media screen and (min-width:$breakpoint-computer) {
